@@ -946,7 +946,7 @@ COMMAND_HANDLER(adapter_gpio_config_handler)
 	while (i < CMD_ARGC) {
 		LOG_DEBUG("Processing %s", CMD_ARGV[i]);
 
-		if (isdigit(*CMD_ARGV[i])) {
+		if (isdigit((signed char)*CMD_ARGV[i])) {
 			int gpio_num; /* Use a meaningful output parameter for more helpful error messages */
 			COMMAND_PARSE_NUMBER(int, CMD_ARGV[i], gpio_num);
 			gpio_config->gpio_num = gpio_num;

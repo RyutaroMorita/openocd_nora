@@ -512,7 +512,7 @@ void log_socket_error(const char *socket_desc)
 char *find_nonprint_char(char *buf, unsigned buf_len)
 {
 	for (unsigned int i = 0; i < buf_len; i++) {
-		if (!isprint(buf[i]))
+		if (!isprint((signed char)buf[i]))
 			return buf + i;
 	}
 	return NULL;

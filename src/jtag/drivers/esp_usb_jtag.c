@@ -16,6 +16,7 @@
 #include "bitq.h"
 #include "libusb_helper.h"
 
+#undef __packed
 #define __packed __attribute__((packed))
 
 /*
